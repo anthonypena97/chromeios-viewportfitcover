@@ -44,6 +44,7 @@ Details with my function names and numbers:
 ## Usage
 
 To view a working demo of the soltion, simply visit [chromeios-viewportfitcover](https://anthonypena97.github.io/chromeios-viewportfitcover/)
+The blue is the HTMLCanvas and red is the HTML Document with a background color of red.
 
 ## Installation
 
