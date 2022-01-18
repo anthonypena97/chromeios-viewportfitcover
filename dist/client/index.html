@@ -103,6 +103,14 @@
             overflow-y: hidden;
         }
 
+        .display {
+            display: block;
+        }
+
+        .displayNone {
+            display: none;
+        }
+
         :root {
             touch-action: pan-x pan-y;
             height: 100%
@@ -125,11 +133,21 @@
 
 <body unselectable="on">
 
-    <form style="color:white;font-size:20px;position:fixed;top:80px;left:80px;z-index: 30">
+    <form style="color:white;font-size:20px;position:fixed;top:80px;left:80px;z-index: 30" id="form">
         <input style="width:15px;height:15px;" type="checkbox" id="viewportFunction" name="viewportFunction"
             value='true'>
         <label for="vehicle1"> Toggle Viewport Workaround for Landscape</label>
     </form>
+
+    <p style="color:white;font-size:15px;position:fixed;top:300px;left:60px;z-index: 30" id="portraitMessage">Rotate
+        Mobile
+        Device for landscape feature
+    </p>
+
+    <p style="color:white;font-size:20px;position:fixed;top:300px;left:600px;z-index: 30" id="desktopMessage">This
+        Project
+        is for Mobile
+    </p>
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>

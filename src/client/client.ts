@@ -107,8 +107,7 @@ async function init() {
 
     document.getElementById("viewportFunction").addEventListener("click", toggleFunction);
 
-    // chrome ios full width workaound
-    checkLandscape();
+    onWindowResize();
 
     animate();
 
@@ -142,7 +141,40 @@ function onWindowResize() {
 
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    checkLandscape()
+    if (isMobile.matches) {
+
+        console.log('mobile')
+
+        document.getElementById("portraitMessage").classList.remove('displayNone')
+        document.getElementById("portraitMessage").classList.add('display')
+
+        document.getElementById("desktopMessage").classList.remove('display')
+        document.getElementById("desktopMessage").classList.add('displayNone')
+
+        document.getElementById("form").classList.remove('display')
+        document.getElementById("form").classList.add('displayNone')
+
+    }
+
+    if (isDesktop.matches) {
+
+        document.getElementById("desktopMessage").classList.remove('displayNone')
+        document.getElementById("desktopMessage").classList.add('display')
+
+        document.getElementById("portraitMessage").classList.remove('display')
+        document.getElementById("portraitMessage").classList.add('displayNone')
+
+        document.getElementById("form").classList.remove('display')
+        document.getElementById("form").classList.add('displayNone')
+
+    }
+
+    if (isMobileLandscape.matches) {
+
+        checkLandscape()
+
+    }
+
 
     // //// UNCOMMENT FOR DEBUGGING - returns the innerwidth and the innerheight ////
     // showViewport();
@@ -152,6 +184,15 @@ function onWindowResize() {
 function checkLandscape() {
 
     console.log(viewportFunction)
+
+    document.getElementById("form").classList.remove('displayNone')
+    document.getElementById("form").classList.add('display')
+
+    document.getElementById("portraitMessage").classList.remove('display')
+    document.getElementById("portraitMessage").classList.add('displayNone')
+
+    document.getElementById("desktopMessage").classList.remove('display')
+    document.getElementById("desktopMessage").classList.add('displayNone')
 
     if (viewportFunction === 'true') {
 
@@ -194,19 +235,17 @@ function checkLandscape() {
 
 
             }, 100);
-
-        } else {
-
-            zoom = 1;
-            document.getElementsByClassName('html')[0].setAttribute('style', 'zoom:1');
-
-            document.getElementsByTagName('body')[0].classList.add('pageLock');
-            document.getElementsByTagName('canvas')[0].classList.add('canvasFixed');
-
         }
 
-    }
+    } else {
 
+        zoom = 1;
+        document.getElementsByClassName('html')[0].setAttribute('style', 'zoom:1');
+
+        document.getElementsByTagName('body')[0].classList.add('pageLock');
+        document.getElementsByTagName('canvas')[0].classList.add('canvasFixed');
+
+    }
 
 
 };
