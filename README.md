@@ -3,7 +3,7 @@ A Work Around for extending a web page full screen past the iPhone notch.
 
 ![MIT License badge](https://img.shields.io/badge/license-MIT_License-green)
 
-[![chromeios-viewport-demo](https://user-images.githubusercontent.com/79285555/149988718-ac127706-4d0f-4e2c-a7c8-01b738398868.gif](https://anthonypena97.github.io/chromeios-viewportfitcover/)
+[![chromeios-viewport-demo](https://user-images.githubusercontent.com/79285555/149988718-ac127706-4d0f-4e2c-a7c8-01b738398868.gif)](https://anthonypena97.github.io/chromeios-viewportfitcover/)
 
 #### Demo Site: https://anthonypena97.github.io/chromeios-viewportfitcover/
 
