@@ -1,5 +1,5 @@
 # chromeios-viewportfitcover
-A Work Around for extending a web page full screen past the iPhone notch.
+A Work Around for mimicking Safari's viewport-fit: cover on Chrome. Which extends a web page past the iPhone notch.
 
 ![MIT License badge](https://img.shields.io/badge/license-MIT_License-green)
 
