@@ -13,7 +13,7 @@ Application written in Typescript, within a [Three.Js](https://threejs.org/) env
 
 ## Creator Message
 
-*I could not find a solution for extending the web page past the iPhone 12 notch for Google Chrome, so I set to figure it out myself. Safari developed a solution with the inclusion of [Viewport-fit: cover](https://webkit.org/blog/7929/designing-websites-for-iphone-x/). My use case was for a 3D Web App I was making and wanted the HTMLcanvas/scene to take up the whole space. This is not the perfect solution, but I hope you may find use of it, or that it might help you find your own approach. The client.ts (javascript for page) is written within a three.js enviornment, but I'm sure you can draw solutions for your context with some studying. I found this solution by noticing when one zooms on a page on the Chrome iOS app, the whole viewport is used. Email me if you have any questons. Peace!*
+*I could not find a solution for extending the web page past the iPhone 12 notch for Google Chrome, so I set to figure it out myself. Safari developed a solution with the inclusion of [Viewport-fit: cover](https://webkit.org/blog/7929/designing-websites-for-iphone-x/). My use case was for a 3D Web App I was making and wanted the HTMLcanvas/scene to take up the whole space. This is not the perfect solution, but I hope you may find use of it, or that it might help you find your own approach. The client.ts (javascript for page) is written within a three.js enviornment, but I'm sure you can draw your own solutions for your own context with some studying. I found this solution by noticing when one zooms on a page on the Chrome iOS app, the whole viewport is used. Email me if you have any questons. Peace!*
 
 ## Table of Contents
 
