@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="html">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1.0, width=device-width" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Chrome iOS Viewport</title>
+
+    <!-- WRITTEN BY ANTHONY PEÑA @anthonypena97 -->
+    <!-- TESTED ON DESKTOP CHROME - SAFARI iOS - CHROME iOS - INSTAGRAM - TWITTER - 01/07/2022 -->
+
+    <style>
+        html {
+            padding: 0;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        body {
+            background-color: rgb(255, 0, 0);
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        *::-webkit-scrollbar {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        p {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 100%;
+            overflow-wrap: break-word;
+        }
+
+        body,
+        canvas {
+            margin: 0;
+            user-select: none;
+
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            outline: none;
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+        }
+
+        canvas {
+            z-index: 2;
+            opacity: 1;
+        }
+
+        .canvasHidden {
+            display: block;
+            opacity: 0;
+        }
+
+        .canvasFade {
+            transition: opacity 2s ease;
+            -webkit-transition: opacity ease-in-out 2s;
+            -moz-transition: opacity ease-in-out 2s;
+            -o-transition: opacity ease-in-out 2s;
+            transition: opacity ease-in-out 2s;
+        }
+
+        .canvasRelative {
+            position: relative;
+        }
+
+        .canvasFixed {
+            position: fixed;
+        }
+
+        .pageUnlock {
+            overflow: visible;
+            overflow-x: visible;
+            overflow-y: visible;
+        }
+
+        .pageLock {
+            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .display {
+            display: block;
+        }
+
+        .displayNone {
+            display: none;
+        }
+
+        :root {
+            touch-action: pan-x pan-y;
+            height: 100%
+        }
+
+        .disable-dbl-tap-zoom {
+            touch-action: manipulation;
+        }
+
+        /* mobiles */
+        @media screen and (max-width: 580px) {
+
+            body,
+            canvas {
+                cursor: default;
+            }
+        }
+    </style>
+</head>
+
+<body unselectable="on">
+
+    <form style="color:white;font-size:20px;position:fixed;top:80px;left:80px;z-index: 30" id="form">
+        <input style="width:15px;height:15px;" type="checkbox" id="viewportFunction" name="viewportFunction"
+            value='true'>
+        <label for="vehicle1"> Toggle Viewport Workaround for Landscape</label>
+    </form>
+
+    <p style="color:white;font-size:15px;position:fixed;top:300px;left:60px;z-index: 30" id="portraitMessage">Rotate
+        Mobile
+        Device for landscape feature
+    </p>
+
+    <p style="color:white;font-size:20px;position:fixed;top:300px;left:600px;z-index: 30" id="desktopMessage">This
+        Project
+        is for Mobile
+    </p>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
+    <script type="module" src="bundle.js"></script>
+</body>
+
+</html>
