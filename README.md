@@ -9,7 +9,7 @@ A Work Around for mimicking Safari's viewport-fit: cover on Chrome, which extend
 
 <p> ---------------------------------------- </p>
 
-Application written in Typescript, within a [Three.Js](https://threejs.org/) enviornment to generate HTML Canvas.
+Application written in Typescript, within a [Three.Js](https://threejs.org/) environment to generate HTML Canvas.
 
 ## Creator Message
 
@@ -32,9 +32,9 @@ Application written in Typescript, within a [Three.Js](https://threejs.org/) env
 In simple terms, my approach to extending the web page past the iPhone notch is to zoom on the page, and scroll to the middle.
 
 Details with my function names and numbers:
-- Include event listener for window resizing, which triggers a function (onWindowResize) to determine if window is mobile and landscape (checkLandscape)
+- Include event listener for window resizing, which triggers a function (`onWindowResize`) to determine if window is mobile and landscape (`checkLandscape`)
 - Declare a zoom value with desired number, I chose 1.5
-- If mobile and landscape, zoom page with css property `zoom`, or in my case, multiply the htmlCanvas size width and height by determined zoom amount
+- If mobile and landscape, zoom page with css property `zoom`, or in my case, multiply the `htmlCanvas` size width and height by determined zoom amount
 - If document includes `overflow: hidden` styling, it must be "unlocked" momentarily with `overflow: visible`
 - Declare `middleX` with a value to equal `innerWidth * zoom / 6`
 - Delare `middleY` with a value value to equal `innerHieght * zoom / 6`
@@ -43,7 +43,7 @@ Details with my function names and numbers:
 
 ## Usage
 
-To view a working demo of the soltion, simply visit [chromeios-viewportfitcover](https://anthonypena97.github.io/chromeios-viewportfitcover/)
+To view a working demo of the solution, simply visit [chromeios-viewportfitcover](https://anthonypena97.github.io/chromeios-viewportfitcover/).
 The blue is the HTMLCanvas and red is the HTML Document with a background color of red.
 
 ## Installation
@@ -52,16 +52,16 @@ To work with code:
 
 - download, fork, or clone repository
 - open terminal in application root directory
-- enter,`npm i`
-- analyze client.ts and index.html
+- enter, `npm i`
+- analyze `client.ts` and `index.html`
 - enter, `npm run dev` for development
 - enter, `npm run build` once complete
-- copy new bundle.js, index.html, and any public assets from dist/client/ folder
+- copy new `bundle.js`, `index.html`, and any public assets from `dist/client/` folder
 - use copied files for deployment
 
 ## Notes
 
-This application has been tested through and written for Chrome v.97, Safari v.14, iOS v.14, Safari iOs, Chrome iOs, and Instagram. This application is responsive to both Desktop and Mobile use cases.
+This application has been tested through and written for Chrome v.97, Safari v.14, iOS v.14, Safari iOS, Chrome iOS, and Instagram. This application is responsive to both Desktop and Mobile use cases.
 
 ## License
 
